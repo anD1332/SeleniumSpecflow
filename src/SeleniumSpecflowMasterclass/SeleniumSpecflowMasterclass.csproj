@@ -83,6 +83,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="DriverStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
