@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace SeleniumSpecflowMasterclass
 {
-    public class DriverStore
+    public static class DriverStore
     {
         [ThreadStatic] public static IWebDriver Driver;
 
@@ -24,7 +24,7 @@ namespace SeleniumSpecflowMasterclass
 
             var driver = Driver;
 
-            AppDomain.CurrentDomain.DomainUnload += (IChannelSender, args) => driver.Quit();
+            AppDomain.CurrentDomain.DomainUnload += (sender, args) => driver.Quit();
 
             return Driver;
         }
